@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import authMiddleware from './middleware/auth-middleware'
-import clearValidationErrors from './middleware/clear-validation-errors'
+// import clearValidationErrors from './middleware/clear-validation-errors'
 import product from './product'
 
 const router = createRouter({
@@ -60,6 +60,6 @@ router.beforeEach((to, from, next) => {
 })
 
 router.beforeEach(authMiddleware)
-router.beforeEach(clearValidationErrors)
+// router.beforeEach(clearValidationErrors)
 
 export default router

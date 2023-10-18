@@ -29,9 +29,9 @@ onMounted(() => {
 })
 
 const edit = (id) => {
-    productStore.getProductById(id)
+    // productStore.getProductById(id)
     // productStore.form = productStore.product
-    router.push({ name: 'productsEdit', params: { id } })
+    router.replace({ name: 'productsEdit', params: { id } })
 }
 
 /**

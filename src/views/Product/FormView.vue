@@ -7,6 +7,13 @@ import { useProductStore } from '@/stores/product'
 import Button from '@/components/Button.vue'
 import BIcon from '@/components/Icon/BIcon.vue'
 
+const props = defineProps({
+    formData: {
+        type: Object,
+        required: true
+    }
+})
+
 const store = useProductStore()
 const { values, meta, errors, defineInputBinds, defineComponentBinds, setValues } = useForm({
     validationSchema: yup.object({
@@ -30,7 +37,7 @@ watch(values, () => {
 
 onMounted(() => {
     store.validationErrors = null
-    setValues({...store.form})
+    setValues({...props.formData})
 })
 </script>
 <template>

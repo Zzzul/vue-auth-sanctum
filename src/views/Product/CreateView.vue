@@ -11,10 +11,9 @@ const store = useProductStore()
     <div class="container">
         <Card subtitle="Create new product" class="mt-5">
             <form @submit.prevent="store.save">
-                <ProductForm />
+                <ProductForm :formData="store.form"/>
             </form>
         </Card>
-
         <Alert/>
     </div>
 </template>

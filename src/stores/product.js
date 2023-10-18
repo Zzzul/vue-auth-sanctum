@@ -50,7 +50,7 @@ export const useProductStore = defineStore('product', () => {
         })
             .then(({ data }) => {
                 product.value = data.products
-                form.value = data.products
+                // form.value = data.products
             })
             .catch(({ response }) => {
                 toast.error(response.data.message)

@@ -39,7 +39,7 @@ export const useAuthStore = defineStore('auth', () => {
                 router.push({ name: 'home' })
             })
             .catch(({ response }) => {
-                validationErrors.value = response.data.errors
+                validationErrors.value = response?.data?.errors
                 toast.error(response.data.message)
             })
     }
