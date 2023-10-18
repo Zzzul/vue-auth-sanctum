@@ -11,7 +11,7 @@ const middleware401 = async error => {
 
 	if (status === 401 || status === 419) {
 		const auth = useAuthStore()
-		toast.warning('You lost your credentials - will be redirected to login page.')
+		toast.warning(error?.response?.data?.message ?? 'You lost your credentials - will be redirected to login page.')
 		setTimeout(async () => await auth.clearState(), 1000)
 		return Promise.reject({
 			name: 'Permission denied',

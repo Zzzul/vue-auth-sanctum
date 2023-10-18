@@ -42,7 +42,7 @@ const paginationChange = (page) => {
 
   <div class="row">
     <div class="col-md-4">
-      <p v-if="!isLoading" class="text-muted">Showing {{ meta.from }} - {{ meta.to }} of {{ meta.total }}</p>
+      <p v-if="!isLoading" class="text-muted">Showing {{ meta?.from }} - {{ meta?.to }} of {{ meta?.total }}</p>
     </div>
 
     <div class="col-md-8">
